@@ -24,7 +24,7 @@ namespace TwentinonethApplication.ConsoleApp
                         foreach (var file in files)
                         {
 
-                            if (DateTime.Now - file.LastAccessTime > TimeSpan.FromSeconds(30))
+                            if (DateTime.Now - file.LastAccessTime > TimeSpan.FromMinutes(30))
                             {
                                 file.Delete();
                                 Console.WriteLine("Чистим файлы");
@@ -39,7 +39,7 @@ namespace TwentinonethApplication.ConsoleApp
                         foreach (var dir in directories)
                         {
 
-                            if (DateTime.Now - dir.LastAccessTime > TimeSpan.FromSeconds(30))
+                            if (DateTime.Now - dir.LastAccessTime > TimeSpan.FromMinutes(30))
                             {
                                 dir.Delete();
                                 Console.WriteLine("Чистим папки");
